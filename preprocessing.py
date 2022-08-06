@@ -33,5 +33,5 @@ def process(path, testBool):
 
 sentencesTrain = np.array(process(path, False), dtype=object)
 sentencesTest = np.array(process(pathTest, True), dtype=object) # convert the list of sentences to a numpy array
-np.save('train.npy', sentencesTrain) # save the numpy array to a file
-np.save('test.npy', sentencesTest)
+np.save('dataTemp/train.npy', sentencesTrain) # save the numpy array to a file
+np.save('dataTemp/test.npy', sentencesTest)

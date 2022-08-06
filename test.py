@@ -1,9 +1,12 @@
 import numpy as np
 import pandas as pd
+import sys
 
-d = pd.read_pickle("emissionTable_add_k.pkl") # read in the emission table
-d2 = pd.read_pickle("transitionTable_add_k.pkl") # read in the transition table
-sentences = np.load('test.npy', allow_pickle=True) # read in the test sentences
+smoothing = sys.argv[1] # choose the smoothing method
+
+d = pd.read_pickle("dataTemp/emissionTable_" + smoothing + ".pkl") # read in the emission table
+d2 = pd.read_pickle("dataTemp/transitionTable_" + smoothing + ".pkl") # read in the transition table
+sentences = np.load('dataTemp/test.npy', allow_pickle=True) # read in the test sentences
 
 '''Get the emission probability of a word given a tag'''
 dIndex = list(d.index) # get the index of the emission table for efficiency

@@ -130,6 +130,6 @@ print(df2) # print the transition table probabilities after normalization
 # for col in df2.columns:
 #     print(sum(df2[col]))
 
-df.to_pickle("emissionTable_" + smoothing + ".pkl") # Save the emission table to a pickle file
-df2.to_pickle("transitionTable_" + smoothing + ".pkl") # Save the transition table to a pickle file
+df.to_pickle("dataTemp/emissionTable_" + smoothing + ".pkl") # Save the emission table to a pickle file
+df2.to_pickle("dataTemp/transitionTable_" + smoothing + ".pkl") # Save the transition table to a pickle file
 
