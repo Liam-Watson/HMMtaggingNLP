@@ -3,7 +3,7 @@ import numpy as np
 import pandas as pd
 import sys
 
-sentences = np.load('train.npy', allow_pickle=True) # read in the train sentences
+sentences = np.load('dataTemp/train.npy', allow_pickle=True) # read in the train sentences
 
 smoothing = sys.argv[1] # choose the smoothing method
 
